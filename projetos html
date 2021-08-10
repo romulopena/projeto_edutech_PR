@@ -1,0 +1,28 @@
+ta charset="UTF-8">
+
+<script>
+
+    function pulaLinha() {
+        document.write("<br>");
+    }
+
+    function mostra(frase) {
+
+        document.write(frase);
+        pulaLinha();
+    }
+
+    var resposta = ""; // ainda não tem a resposta
+
+    while(true) {
+
+        resposta = prompt("Qual é seu nome?"); 
+
+        if (resposta == "SAIR") { 
+
+            break}
+    }
+
+    mostra("FIM");
+
+</script>
