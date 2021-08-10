@@ -1,0 +1,76 @@
+<meta charset="UTF-8">
+
+<script>
+
+	function print(frase) {
+
+		document.write(frase);
+
+	}
+
+
+
+	var calculo = prompt("o que você deseja calcular? (volume, altura, raio, area lateral, area da base ou area total?)");
+
+
+
+	if(calculo == "volume") {
+
+		var h = parseInt(prompt('informe a altura'));
+		var r = parseInt(prompt('informe o raio')); 
+		var resultado = ((r * r) * 3.14 * h );
+		print("o volume do cilindro é " + resultado + "m³.");
+
+	}
+
+
+    if(calculo == "altura") {
+
+    	var r = parseInt(prompt('informe o raio')); 
+    	var volume = parseInt(prompt("informe o volume"));
+    	var resultado = (volume / ((r * r ) * 3.14));
+    	print("a altura do cilindro é de " + resultado + "m." );
+
+    }
+
+
+    if(calculo == "raio") {
+
+    	var h = parseInt(prompt('informe a altura'));
+    	var volume = parseInt(prompt("informe o volume"));
+    	var resultado = ((Math.sqrt(volume / (h * 3.14))));
+    	print("o raio do cilindro é de " + resultado + "m.");
+
+    }
+	
+
+    if(calculo == "area lateral") {
+
+    	var r = parseInt(prompt('informe o raio')); 
+    	var h = parseInt(prompt('informe a altura'));
+    	var resultado = (6.28 * r * h);
+    	print("a area lateral do cilindro é de " + resultado + "m²");
+
+    }
+
+
+    if(calculo == "area da base") {
+
+    	var r = parseInt(prompt('informe o raio'));
+    	var resultado = (3.14 * (r * r));
+    	print("a area da base do cilindro é de " + resultado + "m².");
+
+    }
+
+
+    if(calculo == "area total") {
+
+    	var r = parseInt(prompt('informe o raio')); 
+    	var h = parseInt(prompt('informe a altura'));
+    	var resultado = ((6.28) * (r * r) + (6.28 * r * h));
+    	print("a area total do cilindro é de " + resultado + "m².");
+
+    }
+
+
+</script>
