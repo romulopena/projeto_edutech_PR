@@ -1,0 +1,15 @@
+numero = int(input('Entre com um número: '))
+valor = 0
+
+print('*' * 18)
+print('Tabuada de {}'.format(numero))
+print('*' * 18)
+
+while(valor <= 10):
+    print('{0} X {1} = {2}'.format(valor, numero, (valor * numero)))
+    valor = valor + 1
+    if(numero > 10):
+        print('Seu numero é muito grande')
+        numero = int(input('Entre com um numero: '))
+
+
