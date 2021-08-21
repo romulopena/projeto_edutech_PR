@@ -1,0 +1,11 @@
+print("*" * 40)
+print("****************TABUADA*****************")
+print("*" * 40)
+
+entrada = int(input('Informe o Numero Desejado > '))
+
+while  entrada <1 or entrada >10:
+    print("tabuada de {0}".format(entrada))
+
+for n in range(1,11):
+    print("{0} x {1} = {2}".format(entrada, n, (entrada * n)))
