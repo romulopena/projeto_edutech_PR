@@ -1,0 +1,100 @@
+<canvas width="600" height="400"></canvas>
+
+<script>
+
+    var tela=document.querySelector("canvas");
+ 
+    var pincel=tela.getContext('2d');
+ 
+//retangulo
+    pincel.fillStyle='green'
+    pincel.fillRect(0, 0, 600, 400);
+
+//losango
+    pincel.fillStyle='yellow'
+    pincel.beginPath();
+    pincel.moveTo(300, 50);
+    pincel.lineTo(50, 200);
+    pincel.lineTo(300, 350);
+    pincel.lineTo(550, 200);
+    pincel.fill();   
+    
+//circulo
+   pincel.fillStyle='darkblue';
+    pincel.beginPath();
+    pincel.arc(300, 200, 100, 0, 2*3.14);
+    pincel.fill();
+
+//faixa branca
+    pincel.fillStyle='white';
+    pincel.fillRect(200, 180, 200, 20);
+
+    pincel.font= '15px Arial';
+    pincel.fillStyle= 'black'
+    pincel.fillText("ORDEM E PROGRESSO", 225, 195);
+
+function desenhaEstrelaMenor(x, y){
+ 
+    pincel.fillStyle='white';
+    pincel.beginPath();
+    pincel.moveTo(x, y-5);
+    pincel.lineTo(x-1, y-1);
+    pincel.lineTo(x-5, y-1);
+    pincel.lineTo(x-2, y+1);
+    pincel.lineTo(x-3, y+5);
+    pincel.lineTo(x, y+3);
+    pincel.lineTo(x+3, y+5);
+    pincel.lineTo(x+2, y+1);
+    pincel.lineTo(x+5, y-1);
+    pincel.lineTo(x+1, y-1);
+    pincel.fill();
+}
+
+
+
+function desenhaEstrelaMaior(x, y){
+ 
+    pincel.fillStyle='white';
+    pincel.beginPath();
+    pincel.moveTo(x, y-5);
+    pincel.lineTo(x-1, y-1);
+    pincel.lineTo(x-5, y-1);
+    pincel.lineTo(x-2, y+2);
+    pincel.lineTo(x-3, y+6);
+    pincel.lineTo(x, y+4);
+    pincel.lineTo(x+3, y+6);
+    pincel.lineTo(x+2, y+2);
+    pincel.lineTo(x+5, y-1);
+    pincel.lineTo(x+2, y-1);
+    pincel.fill();
+}
+
+desenhaEstrelaMenor(210, 208);
+desenhaEstrelaMenor(230, 250);
+desenhaEstrelaMenor(240, 245);
+desenhaEstrelaMenor(250, 240);
+desenhaEstrelaMenor(250, 265);
+desenhaEstrelaMenor(258, 255);
+desenhaEstrelaMenor(260, 220);
+desenhaEstrelaMenor(280, 260);
+desenhaEstrelaMenor(295, 235);
+desenhaEstrelaMenor(305, 220);
+desenhaEstrelaMenor(305, 240);
+desenhaEstrelaMenor(308, 255);
+desenhaEstrelaMenor(308, 280);
+desenhaEstrelaMenor(320, 170);
+desenhaEstrelaMenor(320, 230);
+desenhaEstrelaMenor(325, 208);
+desenhaEstrelaMenor(325, 255);
+desenhaEstrelaMenor(333, 268);
+desenhaEstrelaMenor(340, 255);
+desenhaEstrelaMenor(355, 250);
+desenhaEstrelaMenor(355, 270);
+desenhaEstrelaMenor(357, 260);
+desenhaEstrelaMenor(365, 248);
+desenhaEstrelaMenor(375, 220);
+desenhaEstrelaMenor(375, 240);
+desenhaEstrelaMenor(380, 230);
+desenhaEstrelaMenor(390, 210);
+
+</script>
