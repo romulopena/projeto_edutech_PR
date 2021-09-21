@@ -1,0 +1,43 @@
+class Carro:
+    def __init__(self, marca, modelo, ano, preco):
+        self._marca = marca.title()
+        self._modelo = modelo.title()
+        self._ano = ano
+        self._preco = preco
+
+    def desconto(self, valor):
+        self._preco -= valor
+
+    def aumento_de_preco(self, valor):
+        self._preco += valor
+
+    def __str__(self):
+        return (f'{self._marca} {self._modelo} {self._ano}, R${self._preco}')
+
+class Estoque(list):
+    def __init__(self, carros):
+        self.carros = carros
+
+    def __getitem__(self, item):
+        return self.carros[item]
+
+    @property
+    def listagem(self):
+        return self.carros
+
+    def __len__(self):
+        return len(self.carros)
+
+
+carro_um = Carro('ford', 'mustang', 1968, 150000)
+carro_dois = Carro('ford', 'maverick', 1970, 120000)
+
+carro_um.desconto(500)
+carro_um.aumento_de_preco(4500)
+carro_dois.aumento_de_preco(10000)
+
+carros = (carro_um, carro_dois)
+estoque = Estoque(carros)
+
+for carro in estoque.listagem:
+    print(carro)
