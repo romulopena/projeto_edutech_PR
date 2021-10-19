@@ -1,0 +1,12 @@
+print ("──────▄▌▐▀▀▀▀▀▀▀▀▀▀▀▀▌")
+print ("───▄▄██▌█░░░░░░░░░░░░▐")
+print("▄▄▄▌▐██▌█░░░░░░░░░░░░▐")
+print("███████▌█▄▄▄▄▄▄▄▄▄▄▄▄▌")
+print("▀❍▀▀▀▀▀▀▀❍❍▀▀▀▀▀▀❍❍▀  vroom vroomm")
+
+distancia = float(input('coloque a distância percorrida > '))
+velo_media = float(input('coloque a velocidade média > '))
+
+tempo_estimado = round(distancia / velo_media, 2)
+
+print(f'Tempo estimado = {tempo_estimado}')
