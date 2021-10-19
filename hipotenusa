@@ -1,0 +1,6 @@
+cat_o = float(input('valor cateto oposto > '))
+cat_a = float(input('valor cateto adjacente > '))
+
+hipotenusa = (cat_a ** 2 + cat_o ** 2)
+
+print(f'Hipotenusa = {round(hipotenusa)}')
