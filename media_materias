@@ -1,0 +1,24 @@
+print("*****************************")
+print("media da materias da tia")
+print("*****************************")
+
+media_p_1 = int(input('insira sua 1 media de portugues'))
+media_p_2 = int(input('insira sua 2 media de portugues'))
+
+media_de_portugues = (media_p_1 + media_p_2) / 2
+
+media_i_1 = int(input('insira sua 1 media de ingles'))
+media_i_2 = int(input('insira sua 2 media de ingles'))
+
+media_de_ingles = (media_i_1 + media_i_2) / 2
+
+print("a media de portugues é {0} e sua media de ingles é {1}".format(media_de_portugues,media_de_ingles))
+
+
+
+distancia = float(input('qual a distância > '))
+valocidade = float(input('qual a velocidade > '))
+
+cal_tempo_estimado = round(distancia/valocidade, 2)
+
+print(f'Càlculo de Tempo estimado = {(cal_tempo_estimado)}')
